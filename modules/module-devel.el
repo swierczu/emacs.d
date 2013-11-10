@@ -58,18 +58,18 @@
 ;; Erlang
 ;; ---------------------------------------------------------------------------
 
-(add-to-list 'load-path "/opt/local/lib/erlang/lib/tools-2.6.8/emacs/")
+(setq load-path (cons "/opt/local/lib/erlang/lib/tools-2.6.8/emacs/" load-path))
+(setq erlang-root-dir "/opt/local/lib/erlang")
+(setq exec-path (cons "/opt/local/lib/erlang/bin" exec-path))
+(setq erlang-man-root-dir "/opt/local/lib/erlang/man")
+(setq inferior-erlang-machine-options '("-sname" "emacs"))
+
 (require 'erlang-start)
 
 (add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
 (add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
 
-(setq erlang-root-dir "/opt/local/lib/erlang")
-(add-to-list 'exec-path "/opt/local/lib/erlang/bin")
-(setq erlang-man-root-dir "/opt/local/lib/erlang/man")
-(setq inferior-erlang-machine-options '("-sname" "emacs"))
-
-(add-to-list 'load-path "/opt/share/distel/elisp/")
+(add-to-list 'load-path "~/.emacs.d/distel/elisp/")
 (require 'distel)
 (distel-setup)
 
