@@ -3,3 +3,5 @@ ac-comphist.dat
 cache/*
 image-dired/*
 tramp
+ede-projects.el
+srecode-map.el

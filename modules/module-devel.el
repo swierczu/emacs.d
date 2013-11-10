@@ -87,4 +87,3 @@
 (require 'module-snippets)
 
 (provide 'module-devel)
-

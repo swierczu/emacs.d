@@ -9,12 +9,21 @@
 (setq local-yasnippet-dir "~/.emacs.d/yasnippet/")
 (setq local-auto-complete-dir "~/.emacs.d/auto-complete/")
 (setq local-magit-dir "~/.emacs.d/magit-1.2.0/")
+(setq local-cedet-dir "~/.emacs.d/cedet-bzr/trunk/lisp/")
 
 (add-to-list 'load-path local-modules-dir)
 (add-to-list 'load-path local-lisp-dir)
 (add-to-list 'load-path local-yasnippet-dir)
 (add-to-list 'load-path local-auto-complete-dir)
 (add-to-list 'load-path local-magit-dir)
+(add-to-list 'load-path local-cedet-dir)
+
+;; ---------------------------------------------------------------------------
+;; CEDET 
+;; CEDET has to be loaded first. This is workround for eieio error.
+;; ---------------------------------------------------------------------------
+
+(require 'module-cedet)
 
 ;; local cache path (for recentf, IDO, etc.)
 ; create cache dir if one does not exist
@@ -22,9 +31,6 @@
     (progn
       (message "creating cache directory at %s" local-cache-dir)
       (make-directory local-cache-dir)))
-
-;;(require 'module-keys)
-
 
 ;; ---------------------------------------------------------------------------
 ;; Packages
