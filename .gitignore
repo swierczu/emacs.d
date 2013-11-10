@@ -1,0 +1,5 @@
+ac-comphist.dat
+*.elc
+cache/*
+image-dired/*
+tramp
