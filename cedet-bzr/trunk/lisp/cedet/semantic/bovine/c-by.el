@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 1999-2012 Free Software Foundation, Inc.
 
-;; Author: Bartłomiej Świercz <swierczu@Bartomiej-Swiercz-MacBook.local>
-;; Created: 2013-11-10 19:05:37+0100
+;; Author: Bartłomiej Świercz <swierczu@osx>
+;; Created: 2013-11-13 00:55:45+0100
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

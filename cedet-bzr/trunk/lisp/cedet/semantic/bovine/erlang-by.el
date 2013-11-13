@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003 Vladimir G. Sekissov
 
-;; Author: Bartłomiej Świercz <swierczu@Bartomiej-Swiercz-MacBook.local>
-;; Created: 2013-11-10 19:05:44+0100
+;; Author: Bartłomiej Świercz <swierczu@osx>
+;; Created: 2013-11-13 00:55:51+0100
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003, 2009 David Ponce
 
-;; Author: Bartłomiej Świercz <swierczu@Bartomiej-Swiercz-MacBook.local>
-;; Created: 2013-11-10 19:05:02+0100
+;; Author: Bartłomiej Świercz <swierczu@osx>
+;; Created: 2013-11-13 00:55:10+0100
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

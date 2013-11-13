@@ -2,6 +2,7 @@ ac-comphist.dat
 *.elc
 cache/*
 image-dired/*
+semanticdb/*
 tramp
 ede-projects.el
 srecode-map.el

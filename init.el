@@ -10,6 +10,7 @@
 (setq local-auto-complete-dir "~/.emacs.d/auto-complete/")
 (setq local-magit-dir "~/.emacs.d/magit-1.2.0/")
 (setq local-cedet-dir "~/.emacs.d/cedet-bzr/trunk/lisp/")
+(setq local-cedet-contrib-dir "~/.emacs.d/cedet-bzr/trunk/contrib/")
 
 (add-to-list 'load-path local-modules-dir)
 (add-to-list 'load-path local-lisp-dir)
@@ -17,6 +18,7 @@
 (add-to-list 'load-path local-auto-complete-dir)
 (add-to-list 'load-path local-magit-dir)
 (add-to-list 'load-path local-cedet-dir)
+(add-to-list 'load-path local-cedet-contrib-dir)
 
 ;; ---------------------------------------------------------------------------
 ;; CEDET 

@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2003, 2004, 2009 Eric M. Ludlam
 
-;; Author: Bartłomiej Świercz <swierczu@Bartomiej-Swiercz-MacBook.local>
-;; Created: 2013-11-10 19:06:17+0100
+;; Author: Bartłomiej Świercz <swierczu@osx>
+;; Created: 2013-11-13 00:56:24+0100
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

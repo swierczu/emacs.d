@@ -4,10 +4,13 @@
 ;; ---------------------------------------------------------------------------
 
 (load-file "~/.emacs.d/cedet-bzr/trunk/cedet-devel-load.el")
+(load-file "~/.emacs.d/cedet-bzr/trunk/contrib/cedet-contrib-load.el")
+(add-to-list  'Info-directory-list "~/.emacs.d/cedet-bzr/trunk/doc/info")
 
 (setq semantic-default-submodes
             '(
               global-semanticdb-minor-mode
+              global-semantic-mru-bookmark-mode
               global-semantic-highlight-edits-mode
               global-semantic-idle-local-symbol-highlight-mode
               ;; global-cedet-m3-minor-mode
@@ -31,14 +34,11 @@
 (semantic-mode 1)
 
 (require 'semantic/ia)
-(require 'semantic/bovine/gcc)
-(require 'semantic/db-javap)
-(require 'semanticdb)
-(require 'semantic/bovine/erlang)
-
-(defun my-semantic-hook ()
-    (imenu-add-to-menubar "TAGS"))
-(add-hook 'semantic-init-hooks 'my-semantic-hook)
+(require 'semantic/bovine)
+(require 'semantic/db)
+(require 'cedet-files)
+(require 'eassist)
+(require 'cedet-java)
 
 (when (cedet-gnu-global-version-check t)
     (semanticdb-enable-gnu-global-databases 'c-mode)
@@ -46,6 +46,16 @@
 
 (when (cedet-ectag-version-check)
     (semantic-load-enable-primary-exuberent-ctags-support))
+
+(setq-mode-local c-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+
+(setq-mode-local c++-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+
+(setq-mode-local erlang-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+
 
 (global-ede-mode t)
 

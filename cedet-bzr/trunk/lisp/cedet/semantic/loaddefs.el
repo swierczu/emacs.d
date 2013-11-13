@@ -2095,7 +2095,7 @@ Setup buffer for parse.
 ;;;;;;  "ede-grammar.el" "fw.el" "gram-wy-fallback.el" "grammar.el"
 ;;;;;;  "java.el" "sb.el" "symref/filter.el" "util.el" "wisent.el"
 ;;;;;;  "wisent/comp.el" "wisent/expr.el" "wisent/grammar-macros.el"
-;;;;;;  "wisent/java.el" "wisent/wisent.el") (21119 51842 757264))
+;;;;;;  "wisent/java.el" "wisent/wisent.el") (21122 49043 369056))
 
 ;;;***
 
