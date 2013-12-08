@@ -58,14 +58,14 @@
 ;; Erlang
 ;; ---------------------------------------------------------------------------
 
-(setq load-path (cons "/opt/local/lib/erlang/lib/tools-2.6.8/emacs/" load-path))
+(setq load-path (cons "/opt/local/lib/erlang/lib/tools-2.6.12/emacs/" load-path))
 (setq erlang-root-dir "/opt/local/lib/erlang")
 (setq exec-path (cons "/opt/local/lib/erlang/bin" exec-path))
 (setq erlang-man-root-dir "/opt/local/lib/erlang/man")
 (setq inferior-erlang-machine-options '("-sname" "emacs"))
 
 (require 'erlang-start)
-(require 'erlang-flymake)
+;(require 'erlang-flymake)
 
 (add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
 (add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))

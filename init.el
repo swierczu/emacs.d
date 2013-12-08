@@ -11,6 +11,7 @@
 (setq local-magit-dir "~/.emacs.d/magit-1.2.0/")
 (setq local-cedet-dir "~/.emacs.d/cedet-bzr/trunk/lisp/")
 (setq local-cedet-contrib-dir "~/.emacs.d/cedet-bzr/trunk/contrib/")
+(setq local-helm-dir"~/.emacs.d/helm/")
 
 (add-to-list 'load-path local-modules-dir)
 (add-to-list 'load-path local-lisp-dir)
@@ -19,6 +20,7 @@
 (add-to-list 'load-path local-magit-dir)
 (add-to-list 'load-path local-cedet-dir)
 (add-to-list 'load-path local-cedet-contrib-dir)
+(add-to-list 'load-path local-helm-dir)
 
 ;; ---------------------------------------------------------------------------
 ;; CEDET 
@@ -71,8 +73,11 @@
 ;; Scroll line by line
 (setq scroll-step 1)  
                         
-;; wheel-mouse set to on
-(mouse-wheel-mode t)                          
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; More space
 (tool-bar-mode 0)
@@ -113,9 +118,6 @@
 
 ;; show column number in status bar             
 (column-number-mode t) 
-
-;; move scrollbar to right                       
-(set-scroll-bar-mode 'right)
 
 ;; switch off bell sound
 (setq visible-bell t)
@@ -229,7 +231,8 @@
 (if (eq window-system 'ns)
     (progn ; OSX specific settings
       (message "Emacs is running on OSX")
-      (setq mac-right-option-modifier nil) )
+      (setq mac-right-option-modifier nil)
+      (setq locate-command "mdfind") )
   (if (eq window-system 'x)
       (progn ; XWindow specific settings
         (message "Emacs is running with XWindow")
@@ -243,3 +246,10 @@
 ;; ---------------------------------------------------------------------------
 
 (require 'sunrise-commander)
+
+;; ---------------------------------------------------------------------------
+;; Helm
+;; ---------------------------------------------------------------------------
+
+(require 'cl-lib)
+(require 'helm)
