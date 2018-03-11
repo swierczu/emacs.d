@@ -48,17 +48,12 @@
 ;; magit
 (require 'magit)
 
-;; ---------------------------------------------------------------------------
-;; PHP
-;; ---------------------------------------------------------------------------
-
-(require 'php-mode)
 
 ;; ---------------------------------------------------------------------------
 ;; Erlang
 ;; ---------------------------------------------------------------------------
 
-(setq load-path (cons "/opt/local/lib/erlang/lib/tools-2.6.12/emacs/" load-path))
+(setq load-path (cons "/opt/local/lib/erlang/lib/tools-2.6.13/emacs/" load-path))
 (setq erlang-root-dir "/opt/local/lib/erlang")
 (setq exec-path (cons "/opt/local/lib/erlang/bin" exec-path))
 (setq erlang-man-root-dir "/opt/local/lib/erlang/man")
@@ -75,16 +70,15 @@
 (distel-setup)
 
 ;; ---------------------------------------------------------------------------
-;; Zotonic - Erlang Web Framework
-;; ---------------------------------------------------------------------------
-
-(require 'zotonic-tpl-mode)
-(add-to-list 'auto-mode-alist '("\\.tpl$" . zotonic-tpl-mode))
-
-;; ---------------------------------------------------------------------------
 ;; Snippets
 ;; ---------------------------------------------------------------------------
 
 (require 'module-snippets)
+
+;; ---------------------------------------------------------------------------
+;; Protobuf
+;; ---------------------------------------------------------------------------
+
+(require 'protobuf-mode)
 
 (provide 'module-devel)

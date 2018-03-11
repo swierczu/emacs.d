@@ -6,3 +6,5 @@ semanticdb/*
 tramp
 ede-projects.el
 srecode-map.el
+auto-save-list/
+.DS_Store

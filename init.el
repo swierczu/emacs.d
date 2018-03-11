@@ -46,7 +46,7 @@
 (require 'uniquify)
 (require 'ido)
 (require 'jumplist)
-(require 'sr-speedbar)
+;;(require 'sr-speedbar)
 (require 'multi-term)
 (require 'fill-column-indicator)
 (require 'tramp)
@@ -62,6 +62,7 @@
 (require 'module-autocompletion)
 (require 'module-orgmode)
 (require 'module-devel)
+(require 'module-web)
 
 ;; ---------------------------------------------------------------------------
 ;; Editor settings
@@ -75,9 +76,8 @@
                         
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+;(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; More space
 (tool-bar-mode 0)
@@ -251,5 +251,5 @@
 ;; Helm
 ;; ---------------------------------------------------------------------------
 
-(require 'cl-lib)
-(require 'helm)
+;(require 'cl-lib)
+;(require 'helm)
